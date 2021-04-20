@@ -1,5 +1,5 @@
-from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, project_point
-from nldi_flowtools.utils import get_total_basin, split_catchment, get_onFlowline, get_upstream_basin, merge_geometry
+from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, \
+    project_point, get_total_basin, split_catchment, get_onFlowline, get_upstream_basin, merge_geometry
 import geojson
 
 
@@ -57,7 +57,7 @@ class SplitCatchment:
             # feature3 = geojson.Feature(geometry=self.upstreamBasin, id='upstreamBasin')
             featurecollection = geojson.FeatureCollection([feature1, feature2])
 
-        print(featurecollection)
+        # print(featurecollection)
         return featurecollection
 
 # main functions

@@ -10,8 +10,6 @@ from shapely.geometry import shape, mapping, Point, GeometryCollection, LineStri
 import json
 import numpy as np
 import geopandas
-# from osgeo import ogr, osr, gdal
-# from functools import partial
 
 
 # arguments
@@ -59,7 +57,6 @@ def get_local_catchment(x, y):
     }
 
     # request catchment geometry from point in polygon query from NLDI geoserver
-    # https://labs.waterdata.usgs.gov/geoserver/wmadata/ows?service=wfs&version=1.0.0&request=GetFeature&typeName=wmadata%3Acatchmentsp&outputFormat=application%2Fjson&srsName=EPSG%3A4326&CQL_FILTER=INTERSECTS%28the_geom%2C+POINT%28-73.745860+44.006830%29%29
     r = requests.get(NLDI_GEOSERVER_URL, params=payload)
     resp = r.json()
 
@@ -68,8 +65,6 @@ def get_local_catchment(x, y):
 
     # get main catchment geometry polygon
     features = resp['features']
-    # for feature in features:
-    #     print('feature: ', feature)
     catchmentGeom = Polygon(features[0]["geometry"]['coordinates'][0][0])
 
     print('got local catchment:', catchmentIdentifier)
@@ -78,7 +73,7 @@ def get_local_catchment(x, y):
 
 
 def get_local_flowlines(catchmentIdentifier):
-    # Request NDH Flowlines
+    """Request NDH Flowline from NLDI with Catchment ID"""
 
     cql_filter = "comid=%s" % (catchmentIdentifier)
 

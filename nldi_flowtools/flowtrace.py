@@ -1,5 +1,6 @@
-from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, project_point
-from nldi_flowtools.utils import get_flowgrid, get_onFlowline, get_raindropPath, get_intersectionPoint, get_reachMeasure, split_flowline
+from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, \
+    project_point, get_flowgrid, get_onFlowline, get_raindropPath, get_intersectionPoint, get_reachMeasure, \
+    split_flowline
 import geojson
 
 
