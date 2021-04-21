@@ -11,4 +11,5 @@ def splitcatchment(lon, lat, boolean):
 def flowtrace(lon, lat, boolean, direction):
     results = Flowtrace(lon, lat, boolean, direction)
     results = results.serialize()
+    print('flowtools.py results: ', results)
     return results
