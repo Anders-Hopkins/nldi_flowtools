@@ -8,5 +8,5 @@ numpy
 pyflwdir
 requests
 shapely
-proj==6.2.1
+
 pyproj==2.6.1
