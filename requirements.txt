@@ -1,12 +1,12 @@
 # List required packages in this file, one per line.
 
 rasterio==1.1.0
+gdal
+geojson
+geopandas
+numpy
+pyflwdir
+requests
+shapely
 proj==6.2.1
 pyproj==2.6.1
-gdal 
-geojson 
-geopandas 
-numpy
-pyflwdir 
-requests
-shapely 
