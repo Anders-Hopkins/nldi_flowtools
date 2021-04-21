@@ -1,38 +1,12 @@
-affine==2.3.0
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1605083924122/work
-brotlipy==0.7.0
-certifi==2020.12.5
-cffi @ file:///D:/bld/cffi_1613414050902/work
-chardet @ file:///D:/bld/chardet_1610093614045/work
-click==7.1.2
-click-plugins==1.1.1
-cligj @ file:///home/conda/feedstock_root/build_artifacts/cligj_1605902088619/work
-cryptography @ file:///D:/bld/cryptography_1616851634866/work
-Fiona==1.8.13
-GDAL==3.0.2
-geojson==2.5.0
-geopandas @ file:///home/conda/feedstock_root/build_artifacts/geopandas_1614589434390/work
-idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
-llvmlite==0.36.0
-munch==2.5.0
-numba @ file:///D:/bld/numba_1616708121551/work
-numpy @ file:///D:/bld/numpy_1610324703282/work
-pandas @ file:///D:/bld/pandas_1607423921518/work
-pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
-pyflwdir @ file:///home/conda/feedstock_root/build_artifacts/pyflwdir_1618934777937/work
-pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
-pyparsing==2.4.7
-pyproj @ file:///C:/ci/pyproj_1614278162874/work
-PySocks @ file:///D:/bld/pysocks_1610291695773/work
-python-dateutil==2.8.1
-pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1612179539967/work
+# List required packages in this file, one per line.
+
 rasterio==1.1.0
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1608156231189/work
-Rtree @ file:///D:/bld/rtree_1605197269572/work
-scipy @ file:///C:/bld/scipy_1604304921754/work
-Shapely==1.7.0
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
-snuggs==1.4.7
-urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1615828766818/work
-win-inet-pton @ file:///D:/bld/win_inet_pton_1610147511403/work
-wincertstore==0.2
+gdal
+geojson
+geopandas
+numpy
+pyflwdir
+requests
+shapely
+proj
+pyproj
