@@ -1,5 +1,5 @@
-from nldi_flowtools.flowtrace import Flowtrace
-from nldi_flowtools.splitcatchment import SplitCatchment
+from flowtrace import Flowtrace
+from splitcatchment import SplitCatchment
 
 
 def splitcatchment(lon, lat, boolean):
