@@ -1,7 +1,8 @@
 # List required packages in this file, one per line.
 
-rasterio~=1.1.0
+
 gdal~=3.0.2
+rasterio~=1.1.0
 proj
 pyproj
 geojson
