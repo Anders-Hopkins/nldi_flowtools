@@ -1,8 +1,5 @@
 # List required packages in this file, one per line.
-numpy
-fiona
-gdal
-rasterio
+
 proj
 pyproj
 geojson
