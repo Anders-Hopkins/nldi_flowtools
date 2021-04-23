@@ -1,11 +1,111 @@
-# List required packages in this file, one per line.
-
-rasterio
-proj
-pyproj
-geojson
-geopandas
-numpy
-pyflwdir
-requests
-shapely
+affine==2.3.0
+alabaster==0.7.12
+arrow @ file:///D:/bld/arrow_1615160288495/work
+atomicwrites==1.4.0
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1605083924122/work
+Babel==2.9.0
+backcall==0.2.0
+binaryornot==0.4.4
+bleach==3.3.0
+brotlipy==0.7.0
+certifi==2020.12.5
+cffi @ file:///D:/bld/cffi_1613414050902/work
+chardet @ file:///D:/bld/chardet_1610093614045/work
+click==7.1.2
+click-plugins==1.1.1
+cligj @ file:///home/conda/feedstock_root/build_artifacts/cligj_1605902088619/work
+codecov==2.1.11
+colorama==0.4.4
+cookiecutter==1.7.2
+coverage==5.5
+cryptography @ file:///D:/bld/cryptography_1616851634866/work
+cycler==0.10.0
+decorator==5.0.7
+docopt==0.6.2
+docutils==0.16
+Fiona==1.8.13
+flake8 @ file:///home/conda/feedstock_root/build_artifacts/flake8_1618587824744/work
+GDAL==3.0.2
+geojson==2.5.0
+geopandas @ file:///home/conda/feedstock_root/build_artifacts/geopandas_1614589434390/work
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+imagesize==1.2.0
+importlib-metadata @ file:///D:/bld/importlib-metadata_1619012394438/work
+iniconfig==1.1.1
+ipython==7.22.0
+ipython-genutils==0.2.0
+jedi==0.18.0
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1612119311452/work
+jinja2-time==0.2.0
+keyring==23.0.1
+kiwisolver @ file:///D:/bld/kiwisolver_1610099971815/work
+llvmlite==0.36.0
+lz4==3.0.2
+MarkupSafe @ file:///D:/bld/markupsafe_1610127633636/work
+matplotlib @ file:///D:/bld/matplotlib-base_1594091861366/work
+mccabe==0.6.1
+munch==2.5.0
+numba @ file:///D:/bld/numba_1615583437385/work
+numpy==1.20.2
+numpydoc==1.1.0
+olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+packaging==20.9
+pandas @ file:///D:/bld/pandas_1607423921518/work
+parso==0.8.2
+pickleshare==0.7.5
+Pillow @ file:///C:/ci/pillow_1617386325740/work
+pkginfo==1.7.0
+pluggy==0.13.1
+poyo==0.5.0
+prompt-toolkit==3.0.18
+py==1.10.0
+pycodestyle @ file:///home/conda/feedstock_root/build_artifacts/pycodestyle_1615833610040/work
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+pyflakes @ file:///home/conda/feedstock_root/build_artifacts/pyflakes_1616623675904/work
+pyflwdir @ file:///home/conda/feedstock_root/build_artifacts/pyflwdir_1611043990343/work
+Pygments==2.8.1
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
+pyparsing==2.4.7
+pyproj @ file:///C:/ci/pyproj_1614278162874/work
+PySocks @ file:///D:/bld/pysocks_1610291695773/work
+pytest==6.2.3
+python-dateutil==2.8.1
+python-slugify @ file:///home/conda/feedstock_root/build_artifacts/python-slugify_1593573453419/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1612179539967/work
+pywin32-ctypes==0.2.0
+rasterio==1.1.0
+readme-renderer==29.0
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1608156231189/work
+requests-toolbelt==0.9.1
+rfc3986==1.4.0
+Rtree @ file:///D:/bld/rtree_1605197269572/work
+scipy @ file:///C:/bld/scipy_1604304921754/work
+Shapely==1.7.1
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+snowballstemmer==2.1.0
+snuggs==1.4.7
+Sphinx==3.5.4
+sphinx-copybutton==0.3.1
+sphinx-rtd-theme==0.5.2
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==1.0.3
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.4
+text-unidecode==1.3
+toml==0.10.2
+tornado @ file:///D:/bld/tornado_1610094881553/work
+tqdm==4.60.0
+traitlets==5.0.5
+twine==3.4.1
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
+Unidecode @ file:///home/conda/feedstock_root/build_artifacts/unidecode_1612533191922/work
+urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1615828766818/work
+wcwidth==0.2.5
+webencodings==0.5.1
+whichcraft==0.6.1
+win-inet-pton @ file:///D:/bld/win_inet_pton_1610147511403/work
+wincertstore==0.2
+yarg==0.1.9
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1614945704755/work
