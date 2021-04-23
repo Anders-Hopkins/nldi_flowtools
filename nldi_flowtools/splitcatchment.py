@@ -1,4 +1,4 @@
-from utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, \
+from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get_coordsys, \
     project_point, get_total_basin, split_catchment, get_onFlowline, get_upstream_basin, merge_geometry
 import geojson
 # from nldi_flowtools.utils
