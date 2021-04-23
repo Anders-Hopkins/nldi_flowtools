@@ -2,6 +2,7 @@ from utils import geom_to_geojson, get_local_catchment, get_local_flowlines, get
     project_point, get_flowgrid, get_onFlowline, get_raindropPath, get_intersectionPoint, get_reachMeasure, \
     split_flowline
 import geojson
+# from nldi_flowtools.utils
 
 
 class Flowtrace:

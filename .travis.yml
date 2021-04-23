@@ -10,7 +10,6 @@ install:
   # The versions of pip and numpy that come pre-installed are often too old and
   # can cause problems. Upgrade them.
   - pip install --upgrade pip numpy
-  - pip install gdal
   # Install this package and the packages listed in requirements.txt.
   - pip install .
   # Install extra requirements for running tests and building docs.
