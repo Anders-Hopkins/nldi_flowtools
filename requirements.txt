@@ -1,7 +1,6 @@
 # List required packages in this file, one per line.
 
-
-
+rasterio
 proj
 pyproj
 geojson
