@@ -15,8 +15,8 @@ def splitcatchment(lon, lat, upstream):
     lat : float
         The latitude coordinate of the pour point in decimal degrees
     upstream : bool
-        Determines whether to return the portion of the drainage basin 
-        that falls outside of the local catchment. If True, then the 
+        Determines whether to return the portion of the drainage basin
+        that falls outside of the local catchment. If True, then the
         entire drainage basin is returned. If False, then only the portion
         within the local catchment is returned.
 
@@ -28,12 +28,12 @@ def splitcatchment(lon, lat, upstream):
 
     splitCatchment : geojson
         This polygon can either be a portion or the entire drainage basin for
-        the pour point, and this depends on if the pour  point falls on an NHD 
-        flowline or not. It gets returned if the drainage basin fits only within 
+        the pour point, and this depends on if the pour  point falls on an NHD
+        flowline or not. It gets returned if the drainage basin fits only within
         the local catchment, or if the upstream variable is set to False.
 
     mergedCatchment : geojson
-        This is the entire drainage basin which flows to the pour point. It 
+        This is the entire drainage basin which flows to the pour point. It
         will include area outside of the local catchment, and it will only be
         returned if the upstream variable is set to True.
     """
@@ -58,7 +58,7 @@ def flowtrace(lon, lat, raindropTrace, direction):
         This variable determines which portion of the NHD flowline will be returned.
         'up' returns the portion of the flowline that is upstream from the
         intersection between the raindropPath and the flowline. 'down' returns the
-        downstream portion of the flowline from the intersection point. And 'none' 
+        downstream portion of the flowline from the intersection point. And 'none'
         returns the entire flowline.
 
     Returns
@@ -73,10 +73,9 @@ def flowtrace(lon, lat, raindropTrace, direction):
         This is the entire NHD flowline that the raindropPath intersects with. This line
         will only be returned in the variable direction is set to 'none'.
     raindropPath : geojson
-        This is the path that water will follow from the input point to the nearest NHD 
+        This is the path that water will follow from the input point to the nearest NHD
         flowline. This line will only be returned if 'raindropTrace' is set to True and
         the input point does not fall on an NHD flowline.
-
 
     """
     results = Flowtrace(lon, lat, raindropTrace, direction)

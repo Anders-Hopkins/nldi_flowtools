@@ -27,10 +27,22 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
     readme = readme_file.read()
 
-with open(path.join(here, 'requirements.txt')) as requirements_file:
-    # Parse requirements.txt, ignoring any commented-out lines.
-    requirements = [line for line in requirements_file.read().splitlines()
-                    if not line.startswith('#')]
+# with open(path.join(here, 'requirements.txt')) as requirements_file:
+#     # Parse requirements.txt, ignoring any commented-out lines.
+#     requirements = [line for line in requirements_file.read().splitlines()
+#                     if not line.startswith('#')]
+
+requirements = [
+    rasterio=1.2.2
+    pyproj=3.0.1
+    gdal=3.2.1
+    geojson=2.5.0
+    geopandas=0.9.0
+    numpy=1.20.2
+    pyflwdir
+    requests=2.25.1
+    shapely=1.7.1
+]
 
 
 setup(

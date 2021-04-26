@@ -3,6 +3,7 @@ from nldi_flowtools.utils import geom_to_geojson, get_local_catchment, get_local
 import geojson
 # from nldi_flowtools.utils
 
+
 class SplitCatchment:
 
     """Define inputs and outputs for the main SplitCatchment class"""
