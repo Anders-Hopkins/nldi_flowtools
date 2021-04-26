@@ -1,0 +1,16 @@
+name: nldi_flowtools
+channels:
+  -conda-forge
+dependencies:
+  -python=3.8
+  -rasterio
+  -pyproj
+  -gdal
+  -geojson
+  -geopandas
+  -numpy
+  -pyflwdir
+  -requests
+  -shapely
+  -pip:
+    -pip install git+https://github.com/Anders-Hopkins/nldi_flowtools
