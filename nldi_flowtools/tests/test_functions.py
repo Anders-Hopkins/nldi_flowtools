@@ -1,5 +1,5 @@
-from nldi_flowtools.nldi_flowtools import splitcatchment, flowtrace
-# from nldi_flowtools import splitcatchment, flowtrace
+# from nldi_flowtools.nldi_flowtools import splitcatchment, flowtrace
+from nldi_flowtools import splitcatchment, flowtrace
 
 
 def test_splitcatchment():
