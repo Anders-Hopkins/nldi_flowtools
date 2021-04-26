@@ -342,7 +342,7 @@ def get_raindropPath(flw, projected_xy, nhdFlowline, flowlines, transformToRaste
     print('nhd converted to raster  ')
 
     # create mask from in the same of the flw raster
-    nhdMask = np.zeros(flw.shape, dtype=np.bool)
+    nhdMask = np.zeros(flw.shape, dtype=bool)
 
     # Set the flowline cells to true
     nhdMask.flat[nhdCellList] = True
