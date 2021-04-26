@@ -81,5 +81,4 @@ def flowtrace(lon, lat, raindropTrace, direction):
     """
     results = Flowtrace(lon, lat, raindropTrace, direction)
     results = results.serialize()
-    print('flowtools.py results: ', results)
     return results
