@@ -33,14 +33,15 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
 #                     if not line.startswith('#')]
 
 requirements = [
-    'rasterio==1.2.2',
-    'proj==6.2.1'
+    
     'pyproj==2.6.1',
+    'proj==6.2.1',
     'geojson==2.5.0',
     'numpy==1.20.2',
     'pyflwdir',
     'requests==2.25.1',
-    'shapely==1.7.1'
+    'shapely==1.7.1',
+    'rasterio==1.2.2'
 ]
 
 
