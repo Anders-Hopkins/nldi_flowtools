@@ -21,6 +21,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../nldi_flowtools/nldi_flowtools/nldi_flowtools'))
 
+import nldi_flowtools
 
 # -- General configuration ------------------------------------------------
 
@@ -75,7 +76,7 @@ author = 'USGS'
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-import nldi_flowtools
+
 # The short X.Y version.
 version = nldi_flowtools.__version__
 # The full version, including alpha/beta/rc tags.
