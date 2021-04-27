@@ -9,7 +9,7 @@ import shapely.geometry
 from shapely.geometry import shape, mapping, Point, GeometryCollection, LineString, MultiLineString, Polygon
 import json
 import numpy as np
-import geopandas
+
 
 
 # arguments
@@ -193,7 +193,7 @@ def project_point(x, y, transformToRaster):
     point_geom = Point(x, y)
     print('original point:', point_geom)
 
-    projected_point = transform(transformToRaster, point_geom)
+    projected_point = transform_geom(transformToRaster, point_geom)
     print('projected point:', projected_point)
 
     projected_xy = projected_point.coords[:][0]
@@ -290,11 +290,15 @@ def split_catchment(catchment_geom, projected_xy, transformToRaster, transformTo
 def get_onFlowline(projected_xy, flowlines, transformToRaster, transformToWGS84):
     """Determine if x,y is on a NHD Flowline (within 15m)"""
 
-    # Convert the flowlines to a geopandas dataframe
-    dfNHD = geopandas.GeoDataFrame.from_features(flowlines, crs="EPSG:4326")
+    linestringlist = []
+    for pair in flowlines['features'][0]['geometry']['coordinates'][0]:
+        linestringlist.append((pair[0],pair[1]))
+    
+    linestring = LineString(linestringlist)
 
     # Project the flowlines to the same crs as the flw raster
-    projectedNHD = transform_geom(transformToRaster, dfNHD.geometry[0][0])
+    projectedNHD = transform_geom(transformToRaster, linestring)
+
 
     # What is the distance from the Click Point to the NHD Flowline?
     clickPnt = Point(projected_xy)
@@ -316,10 +320,15 @@ def get_onFlowline(projected_xy, flowlines, transformToRaster, transformToWGS84)
 def get_raindropPath(flw, projected_xy, nhdFlowline, flowlines, transformToRaster, transformToWGS84):
 
     # Convert the flowlines to a geopandas dataframe
-    dfNHD = geopandas.GeoDataFrame.from_features(flowlines, crs="EPSG:4326")
+
+    linestringlist = []
+    for pair in flowlines['features'][0]['geometry']['coordinates'][0]:
+        linestringlist.append((pair[0],pair[1]))
+    
+    linestring = LineString(linestringlist)
 
     # Project the flowlines to the same crs as the flw raster
-    projectedNHD = transform_geom(transformToRaster, dfNHD.geometry[0][0])
+    projectedNHD = transform_geom(transformToRaster, linestring) # dfNHD.geometry[0][0]
 
     # Convert the flowline coordinates to a format that can be iterated
     line = list(projectedNHD.coords)

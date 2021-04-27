@@ -5,9 +5,7 @@ dependencies:
   -python=3.8
   -rasterio
   -pyproj
-  -gdal
   -geojson
-  -geopandas
   -numpy
   -pyflwdir
   -requests

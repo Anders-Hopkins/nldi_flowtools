@@ -2,9 +2,7 @@
 
 rasterio
 pyproj
-gdal
 geojson
-geopandas
 numpy
 pyflwdir
 requests
