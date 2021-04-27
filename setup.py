@@ -40,7 +40,7 @@ requirements = [
     'pyflwdir',
     'requests==2.25.1',
     'shapely==1.7.1',
-    'pyproj=<3.0.0',
+    'pyproj<=3.0.0',
     'proj',
     'rasterio==1.2.2'
 ]
