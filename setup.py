@@ -34,7 +34,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
 
 requirements = [
     'rasterio==1.2.2',
-    'pyproj==3.0.1',
+    'proj==6.2.1'
+    'pyproj==2.6.1',
     'geojson==2.5.0',
     'numpy==1.20.2',
     'pyflwdir',

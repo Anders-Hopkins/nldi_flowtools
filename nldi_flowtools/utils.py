@@ -9,6 +9,7 @@ import shapely.geometry
 from shapely.geometry import shape, mapping, Point, GeometryCollection, LineString, MultiLineString, Polygon
 import json
 import numpy as np
+import math
 
 
 
@@ -172,7 +173,6 @@ def get_coordsys():
     with rasterio.open(IN_FDR_COG, 'r') as ds:
         # get raster crs
         dest_crs = ds.crs
-        # print('dest_crs: ', dest_crs)
 
         # create wgs84 crs
         wgs84 = pyproj.CRS('EPSG:4326')
@@ -197,6 +197,14 @@ def project_point(x, y, transformToRaster):
     print('projected point:', projected_point)
 
     projected_xy = projected_point.coords[:][0]
+
+    # Test if one of the project point coordinates is infinity. If this is the case
+    # then the point was not properly projected to the CRS of the DEM. This has happened
+    # when proj version is greater than 6.2.1 
+    projected_x = projected_point.coords[:][0][0]
+    if math.isinf(projected_x) is True:
+        print('Input point was not properly projected. Check PROJ version. Quiting program.')
+        exit()
 
     return projected_xy
 # return  projected_xy
