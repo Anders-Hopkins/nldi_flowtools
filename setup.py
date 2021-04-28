@@ -42,6 +42,7 @@ requirements = [
     'shapely==1.7.1',
     'pyproj<=3.0.0',
     'proj',
+    'gdal',
     'rasterio==1.2.2'
 ]
 
