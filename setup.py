@@ -2,8 +2,6 @@ from os import path
 from setuptools import setup, find_packages
 import sys
 import versioneer
-GDAL_VERSION = '3.2.2'
-GDAL_CONFIG = r'c:\users\ahopkins\miniconda3\envs\nldi_tools_publishing\lib\site-packages'
 
 
 # NOTE: This file must remain Python 2 compatible for the foreseeable future,
@@ -37,12 +35,12 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
 
 
 requirements = [
-    'geojson==2.5.0',
-    'numpy==1.20.2',
+    'geojson',
+    'numpy',
     'pyflwdir',
-    'requests==2.25.1',
-    'shapely==1.7.1',
-    'pyproj<=3.0.0',
+    'requests',
+    'shapely',
+    'pyproj',
     'proj',
     'gdal',
     'rasterio'
@@ -55,11 +53,12 @@ setup(
     cmdclass=versioneer.get_cmdclass(),
     description="NLDI Flow Tools pulls from the NHD to delineate water flow paths and drainage basins from a lat, lon point.",
     long_description=readme,
+    long_description_content_type='text/markdown',
     author="USGS",
     author_email='ahopkins@contractor.usgs.gov',
     url='https://github.com/Anders-Hopkins/nldi_flowtools',
     python_requires='>={}'.format('.'.join(str(n) for n in min_version)),
-    packages=find_packages(exclude=['docs', 'tests']),
+    packages=find_packages(include=['nldi_flowtools', 'nldi_flowtools.*'], exclude=['docs', 'tests']),
     entry_points={
         'console_scripts': [
             # 'command = some.module:some_function',
