@@ -2,6 +2,8 @@ from os import path
 from setuptools import setup, find_packages
 import sys
 import versioneer
+GDAL_VERSION = '3.2.2'
+GDAL_CONFIG = r'c:\users\ahopkins\miniconda3\envs\nldi_tools_publishing\lib\site-packages'
 
 
 # NOTE: This file must remain Python 2 compatible for the foreseeable future,
@@ -24,6 +26,7 @@ pip install --upgrade pip
 
 here = path.abspath(path.dirname(__file__))
 
+
 with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
     readme = readme_file.read()
 
@@ -32,9 +35,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
 #     requirements = [line for line in requirements_file.read().splitlines()
 #                     if not line.startswith('#')]
 
+
 requirements = [
-    
-    
     'geojson==2.5.0',
     'numpy==1.20.2',
     'pyflwdir',
@@ -43,7 +45,7 @@ requirements = [
     'pyproj<=3.0.0',
     'proj',
     'gdal',
-    'rasterio==1.2.2'
+    'rasterio'
 ]
 
 
@@ -78,4 +80,5 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
     ],
+    
 )
