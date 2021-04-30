@@ -16,7 +16,7 @@ script:
   # - coverage report -m  # Generate test coverage report.
   # - codecov  # Upload the report to codecov.
   - flake8  # Enforce code style ('relaxed' line length limit is set in .flake8 config file).
-  - make _C docs html  # Build the documentation.
+  - make -C docs html  # Build the documentation.
 
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
