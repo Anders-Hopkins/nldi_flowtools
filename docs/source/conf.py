@@ -19,7 +19,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..nldi_flowtools'))
+sys.path.insert(0, os.path.abspath('..'))
 
 import nldi_flowtools
 
