@@ -11,8 +11,6 @@ import json
 import numpy as np
 import math
 
-
-
 # arguments
 NLDI_URL = 'https://labs.waterdata.usgs.gov/api/nldi/linked-data/comid/'
 NLDI_GEOSERVER_URL = 'https://labs.waterdata.usgs.gov/geoserver/wmadata/ows'
@@ -200,7 +198,7 @@ def project_point(x, y, transformToRaster):
 
     # Test if one of the project point coordinates is infinity. If this is the case
     # then the point was not properly projected to the CRS of the DEM. This has happened
-    # when proj version is greater than 6.2.1 
+    # when proj version is greater than 6.2.1
     projected_x = projected_point.coords[:][0][0]
     if math.isinf(projected_x) is True:
         print('Input point was not properly projected. Check PROJ version. Quiting program.')
@@ -300,13 +298,12 @@ def get_onFlowline(projected_xy, flowlines, transformToRaster, transformToWGS84)
 
     linestringlist = []
     for pair in flowlines['features'][0]['geometry']['coordinates'][0]:
-        linestringlist.append((pair[0],pair[1]))
-    
+        linestringlist.append((pair[0], pair[1]))
+
     linestring = LineString(linestringlist)
 
     # Project the flowlines to the same crs as the flw raster
     projectedNHD = transform_geom(transformToRaster, linestring)
-
 
     # What is the distance from the Click Point to the NHD Flowline?
     clickPnt = Point(projected_xy)
@@ -331,12 +328,12 @@ def get_raindropPath(flw, projected_xy, nhdFlowline, flowlines, transformToRaste
 
     linestringlist = []
     for pair in flowlines['features'][0]['geometry']['coordinates'][0]:
-        linestringlist.append((pair[0],pair[1]))
-    
+        linestringlist.append((pair[0], pair[1]))
+
     linestring = LineString(linestringlist)
 
     # Project the flowlines to the same crs as the flw raster
-    projectedNHD = transform_geom(transformToRaster, linestring) # dfNHD.geometry[0][0]
+    projectedNHD = transform_geom(transformToRaster, linestring)  # dfNHD.geometry[0][0]
 
     # Convert the flowline coordinates to a format that can be iterated
     line = list(projectedNHD.coords)
@@ -381,7 +378,7 @@ def get_raindropPath(flw, projected_xy, nhdFlowline, flowlines, transformToRaste
         x = pathPoints[0][0][i]
         y = pathPoints[1][0][i]
         coordlist['coordinates'].append([x, y])
-        i+= 1
+        i += 1
 
     if len(coordlist['coordinates']) < 2:
         print('Failed to trace raindrop path! Try another point. ')
@@ -464,8 +461,7 @@ def get_reachMeasure(intersectionPoint, flowlines, *raindropPath):
 
     # Create streamInfo dict and add some data
     streamInfo = {'gnis_name': streamname,
-                    'comid': flowlines['features'][0]['properties']['comid'],
-                    # 'lengthkm': flowlines['features'][0]['properties']['lengthkm'],
+                    'comid': flowlines['features'][0]['properties']['comid'],  # 'lengthkm': flowlines['features'][0]['properties']['lengthkm'],
                     'intersectionPoint': (intersectionPoint.coords[0][1], intersectionPoint.coords[0][0]),
                     'reachcode': flowlines['features'][0]['properties']['reachcode']}
 
@@ -487,7 +483,7 @@ def get_reachMeasure(intersectionPoint, flowlines, *raindropPath):
     # If the NHD Flowline was split, then calculate measure
     try:
         NHDFlowlinesCut[1]
-    except:  # If NHDFlowline was not split, then the intersectionPoint is either the first or last point on the NHDFlowline
+    except AssertionError as error:  # If NHDFlowline was not split, then the intersectionPoint is either the first or last point on the NHDFlowline
         startPoint = Point(nhdFlowline[0].coords[0][0], nhdFlowline[0].coords[0][1])
         lastPointID = len(nhdFlowline[0].coords) - 1
         lastPoint = Point(nhdFlowline[0].coords[lastPointID][0], nhdFlowline[0].coords[lastPointID][1])
@@ -530,7 +526,7 @@ def split_flowline(intersectionPoint, flowlines):
     # If the NHD Flowline was split, then calculate measure
     try:
         NHDFlowlinesCut[1]
-    except:  # If NHDFlowline was not split, then the intersectionPoint is either the first or last point on the NHDFlowline
+    except AssertionError as error:  # If NHDFlowline was not split, then the intersectionPoint is either the first or last point on the NHDFlowline
         # print('nhdFlowline[0].coords:', nhdFlowline.coords[0])
         startPoint = Point(nhdFlowline[0].coords[0][0], nhdFlowline[0].coords[0][1])
         lastPointID = len(nhdFlowline[0].coords) - 1
