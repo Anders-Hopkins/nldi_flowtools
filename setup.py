@@ -43,8 +43,7 @@ requirements = [
     'pyproj',
     'proj',
     'gdal',
-    'rasterio',
-    'ipython'
+    'rasterio'
 ]
 
 
@@ -80,5 +79,5 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
     ],
-    
+
 )

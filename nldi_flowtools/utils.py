@@ -489,11 +489,14 @@ def get_reachMeasure(intersectionPoint, flowlines, *raindropPath):
         lastPoint = Point(nhdFlowline[0].coords[lastPointID][0], nhdFlowline[0].coords[lastPointID][1])
         if(intersectionPoint == startPoint):
             streamInfo['measure'] = 100
+            error = 'The point of intersection is the first point on the NHD Flowline.'
         if(intersectionPoint == lastPoint):
             streamInfo['measure'] = 0
+            error = 'The point of intersection is the last point on the NHD Flowline.'
         if(intersectionPoint != startPoint and intersectionPoint != lastPoint):
-            print('Error: NHD Flowline measure not calculated')
+            error = 'Error: NHD Flowline measure not calculated'
             streamInfo['measure'] = 'null'
+        print(error)
     else:
         lastLineID = len(NHDFlowlinesCut) - 1
         distToOutlet = round(geod.geometry_length(NHDFlowlinesCut[lastLineID]), 2)
@@ -527,20 +530,22 @@ def split_flowline(intersectionPoint, flowlines):
     try:
         NHDFlowlinesCut[1]
     except AssertionError as error:  # If NHDFlowline was not split, then the intersectionPoint is either the first or last point on the NHDFlowline
-        # print('nhdFlowline[0].coords:', nhdFlowline.coords[0])
         startPoint = Point(nhdFlowline[0].coords[0][0], nhdFlowline[0].coords[0][1])
         lastPointID = len(nhdFlowline[0].coords) - 1
         lastPoint = Point(nhdFlowline[0].coords[lastPointID][0], nhdFlowline[0].coords[lastPointID][1])
         if(intersectionPoint == startPoint):
             upstreamFlowline = GeometryCollection()
             downstreamFlowline = NHDFlowlinesCut
+            error = 'The point of intersection is the first point on the NHD Flowline.'
         if(intersectionPoint == lastPoint):
             downstreamFlowline = GeometryCollection()
             upstreamFlowline = NHDFlowlinesCut
+            error = 'The point of intersection is the last point on the NHD Flowline.'
         if(intersectionPoint != startPoint and intersectionPoint != lastPoint):
-            print('Error: NHD Flowline measure not calculated')
+            error = 'Error: NHD Flowline measure not calculated'
             downstreamFlowline = GeometryCollection()
             upstreamFlowline = GeometryCollection()
+        print(error)
     else:
         lastLineID = len(NHDFlowlinesCut) - 1
         upstreamFlowline = NHDFlowlinesCut[0]
