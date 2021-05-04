@@ -8,4 +8,4 @@ numpy
 pyflwdir
 requests
 shapely
-
+ipython
