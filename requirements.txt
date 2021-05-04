@@ -11,3 +11,4 @@ shapely
 ipython
 matplotlib
 numpydoc
+sphinx_copybutton
