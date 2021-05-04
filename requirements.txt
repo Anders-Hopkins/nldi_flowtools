@@ -9,3 +9,4 @@ pyflwdir
 requests
 shapely
 ipython
+matplotlib
