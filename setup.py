@@ -43,7 +43,8 @@ requirements = [
     'pyproj',
     'proj',
     'gdal',
-    'rasterio'
+    'rasterio',
+    'ipython'
 ]
 
 

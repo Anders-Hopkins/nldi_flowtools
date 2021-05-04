@@ -461,9 +461,9 @@ def get_reachMeasure(intersectionPoint, flowlines, *raindropPath):
 
     # Create streamInfo dict and add some data
     streamInfo = {'gnis_name': streamname,
-                    'comid': flowlines['features'][0]['properties']['comid'],  # 'lengthkm': flowlines['features'][0]['properties']['lengthkm'],
-                    'intersectionPoint': (intersectionPoint.coords[0][1], intersectionPoint.coords[0][0]),
-                    'reachcode': flowlines['features'][0]['properties']['reachcode']}
+                  'comid': flowlines['features'][0]['properties']['comid'],  # 'lengthkm': flowlines['features'][0]['properties']['lengthkm'],
+                  'intersectionPoint': (intersectionPoint.coords[0][1], intersectionPoint.coords[0][0]),
+                  'reachcode': flowlines['features'][0]['properties']['reachcode']}
 
     # Add more data to the streamInfo dict
     if raindropPath:
