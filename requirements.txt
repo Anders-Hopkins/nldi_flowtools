@@ -10,3 +10,4 @@ requests
 shapely
 ipython
 matplotlib
+numpydoc
