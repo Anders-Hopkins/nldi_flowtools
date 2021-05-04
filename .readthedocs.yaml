@@ -18,3 +18,4 @@ python:
    version: 3.8
    install:
    - requirements: requirements.txt
+   - requirements: requirements-dev.txt

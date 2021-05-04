@@ -8,7 +8,3 @@ numpy
 pyflwdir
 requests
 shapely
-ipython
-matplotlib
-numpydoc
-sphinx_copybutton
