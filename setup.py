@@ -41,7 +41,6 @@ requirements = [
     'requests',
     'shapely',
     'pyproj',
-    'proj==6.2.1',
     'gdal',
     'rasterio'
 ]
