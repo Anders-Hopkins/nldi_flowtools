@@ -1,7 +1,7 @@
 # List required packages in this file, one per line.
 
 rasterio
-proj
+proj=6.2.1
 pyproj
 geojson
 numpy
