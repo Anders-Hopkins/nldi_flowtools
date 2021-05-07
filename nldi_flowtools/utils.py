@@ -201,7 +201,7 @@ def project_point(x, y, transformToRaster):
     # when proj version is greater than 6.2.1
     projected_x = projected_point.coords[:][0][0]
     if math.isinf(projected_x) is True:
-        print('Input point was not properly projected. Check PROJ version. Quiting program.')
+        print('Input point was not properly projected. Check PROJ version, must be 6.2.1. Quiting program.')
         exit()
 
     return projected_xy
